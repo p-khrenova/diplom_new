@@ -1,0 +1,263 @@
+{% load staticfiles %}
+<html class="no-js" lang="zxx">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Look beauty - твой салон красоты</title>
+        <meta name="description" content="Здесь описание сайта, которое нужно написать, но сейчас писать не хочется. Должно быть где то 120 символов, поэтому вот.">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">-->
+
+		<link rel="stylesheet" href={% static "css/bootstrap.min.css" %}>
+        <link rel="stylesheet" href={% static "css/font-awesome.min.css"%}>
+        <link rel="stylesheet" href={% static "css/et-line-fonts.css"%}>
+        <link rel="stylesheet" href={% static "css/animate.css"%}>
+        <link rel="stylesheet" href={% static "css/owl.carousel.css"%}>
+        <link rel="stylesheet" href={% static "css/magnific-popup.css"%}>
+        <link rel="stylesheet" href={% static "css/meanmenu.css"%}>
+        <link rel="stylesheet" href={% static "css/shortcode/shortcodes.css" %}>
+        <link rel="stylesheet" href={% static "css/style.css"%}>
+        <link rel="stylesheet" href={% static "responsive.css"%}>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+       	<header class="intelligent-header">
+			<div class="header-area">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3 col-xs-12">
+							<div class="logo">
+								<a href="/"> <img src="{% static "img/logo.png" %}" alt="" /> </a>
+							</div>
+						</div>
+						<div class="col-md-9 col-xs-12">
+							<div class="main-menu text-right">
+								<nav>
+									<ul class="menu">
+										<li><a href="/">Главная</a>
+										<li><a href="/about_us">О нас</a></li>
+										<li><a href="/blog">Новости</a></li>
+										<li><a href="/prices">Цены</a></li>
+<!--										<li><a href="service-page.html">services</a></li>&ndash;&gt;-->
+										<li><a href="/contacts">Контакты</a></li>
+										<li><a  class="person_room"><img src="{% static 'img/person.png' %}" alt=""/></a>
+										<div class="popupProfile view-more">
+											{% if user.is_authenticated %}
+												<a href="/personal-page">({{user.username}})</a>
+<!--												<a href="/logout">Выйти ({{user.username}}) </a>-->
+											<a href="/logout">Выход</a>
+											{% else %}
+												<a href="/register">Регистрация на сайте</a>
+												<a href="/login">Авторизация</a>
+											{% endif %}
+										</div></li>
+
+									</ul>
+								</nav>
+							</div>
+							<div class="mobile-menu"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		{% block content %}
+
+		{% endblock %}
+
+		<footer class="footer-bg">
+			<div class="footer-bottom gray-bg ptb-20">
+				<div class="container">
+					<div class="col-md-6 col-sm-6">
+						<div class="copyright">
+							<p> Москва, м."улица Горчакова", <br> улица Адмирала Лазарева, д.35 </p>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-6">
+						<div class="social-icon text-right">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-vk"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+        <!-- start scrollUp  -->
+        <div id="toTop">
+            <i class="fa fa-chevron-up"></i>
+        </div>
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery-1.12.0.min.js' %}"></script>
+        <script src="{% static 'js/jquery.ui.min.js' %}"></script>
+        <script src="{% static 'js/bootstrap-date.js' %}"></script>
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/isotope.pkgd.min.js'%}"></script>
+        <script src="{% static 'js/owl.carousel.min.js'%}"></script>
+        <script src="{% static 'js/imagesloaded.pkgd.min.js'%}"></script>
+        <script src="{% static 'js/jquery.meanmenu.js '%}"></script>
+        <!-- ajax-mail js -->
+        <script src="{% static 'js/ajax-mail.js' %}"></script>
+        <script src="{% static 'js/plugins.js'%}"></script>
+        <script type="text/javascript">
+            // grab an element
+            var myElement = document.querySelector(".intelligent-header");
+            // construct an instance of Headroom, passing the element
+            var headroom  = new Headroom(myElement);
+            // initialise
+            headroom.init();
+        </script>
+        <script src="{% static 'js/main.js' %}"></script>
+<script type = "text/javascript">
+// 	$.datepicker.regional['en'] = {
+// 	closeText: 'Закрыть',
+// 	prevText: 'Предыдущий',
+// 	nextText: 'Следующий',
+// 	currentText: 'Сегодня',
+// 	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+// 	monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+// 	dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+// 	dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+// 	dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+// 	// weekHeader: 'Не',
+// 	// dateFormat: 'yy.mm.dd',
+// 	firstDay: 1,
+// 	// isRTL: false,
+// 	// showMonthAfterYear: false,
+// 	// yearSuffix: ''
+// };
+            $("#id_date").datepicker({dateFormat: 'yy-mm-dd', 	monthNames: ['Январь','Февраль','Март','Апрель','Май','Июнь','Июль','Август','Сентябрь','Октябрь','Ноябрь','Декабрь'],
+				monthNamesShort: ['Янв','Фев','Мар','Апр','Май','Июн','Июл','Авг','Сен','Окт','Ноя','Дек'],
+				dayNames: ['воскресенье','понедельник','вторник','среда','четверг','пятница','суббота'],
+				dayNamesShort: ['вск','пнд','втр','срд','чтв','птн','сбт'],
+				dayNamesMin: ['Вс','Пн','Вт','Ср','Чт','Пт','Сб'],
+				closeText: 'Закрыть',
+				prevText: 'Предыдущий',
+				nextText: 'Следующий',
+				currentText: 'Сегодня',
+});
+
+
+
+    $(document).ready(function() {
+        //дата по Ajax передается на сервер для сравнения
+        // возвращается список с занятым временем для приема, для сравнения с таблицей
+        var checkUnavailableTime = function() {
+            var date_data = {
+                master_id: {{master.id}},
+                date_from_ajax: $("input[name=date]").val(),
+                csrfmiddlewaretoken: $("[name='csrfmiddlewaretoken']").attr('value')
+            }
+            $.ajax({
+                type: 'POST',
+                url: "/date_from_ajax/",
+                data: date_data,
+                dataType: 'json',
+                success: function(response) {
+                    $("td .time").css("background-color", background_color);
+                    $("td .time").css("color", "black");
+                    for (var i in response['time_list']) {
+                        $("td .time").each(function() {
+                            if ($(this).html() == response['time_list'][i]) {
+                                $(this).css("background-color", "grey");
+                            };
+                        });
+                    }
+                }
+
+            });
+        };
+        //  таблица времени приема
+        var background_color = $("td .time").css("background-color")
+        $("td .time").click(function(event) {
+            event.preventDefault();
+            $("td .time").each(function() {
+                $(this).css("color", "black");
+            });
+            if ($(this).css("background-color") !== "rgb(128, 128, 128)") {
+                $(this).css("color", "#FF00FF");
+                var time = $(this).html();
+                $("#id_time").attr('value', time);
+            } else {
+                $("#id_time").attr('value', '')
+            }
+        });
+        $("td .time").mouseover(function(event) {
+            if ($(this).css("background-color") !== "rgb(128, 128, 128)") {
+                $(this).css("background-color", "#CEF6D8");
+            };
+        }).mouseout(function(event) {
+            if ($(this).css("background-color") !== "rgb(128, 128, 128)") {
+                $(this).css("background-color", background_color);
+            };
+        });
+        // при выборе даты -идет запрос на сервер и возвращаются часы приема, кот уже заняты
+        $("input[name=date]").change(function() {
+            checkUnavailableTime();
+        });
+        // когда приходит сообщение что есть ошибки в заполении формы -
+        //также идет запрос на сервер и возвращаются часы приема, кот уже заняты
+        if ($(".errorlist").html() !== "" && $("input[name=date]").val() !== "") {
+            checkUnavailableTime();
+        }
+    });
+    </script>
+	<script>
+		$('.person_room').click(function () {
+			$('.popupProfile').fadeIn();
+		});
+		$(document).mouseup(function (e){
+			var div = $(".popupProfile");
+			if (!div.is(e.target)
+				&& div.has(e.target).length === 0) {
+				div.fadeOut();
+			}
+		});
+
+
+		document.addEventListener("click", function(e) {
+		  if (e.target.className=="blokUsl") {
+		  	// $('#id_uslugi').val($(event.target).text())
+
+
+		  	$('#id_uslugi').val($(event.target).attr('id'))
+		  	$('#id_cost').val($(event.target).attr('data-price'))
+
+			  let el = document.querySelector('.activeEl')
+					el && el.classList.remove('activeEl')
+					e.target.classList.add('activeEl')
+
+
+		  }
+		});
+	</script>
+<script>
+$('.lg1').on('click', function () {
+    $('#lg2').hide();
+    $('#lg1').show();
+});
+$('.lg2').on('click', function () {
+    $('#lg1').hide();
+    $('#lg2').show();
+})
+
+	$('.stockAdd').click(function () {
+		// $('tis).val($(event.target).attr('id'))
+				let getStockId = $(this).attr('id');
+				$('#id_stockId').val(getStockId)
+
+
+		$('.hidePopup').fadeIn();
+
+	})
+
+</script>
+    </body>
+</html>

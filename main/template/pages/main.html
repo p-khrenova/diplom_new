@@ -1,0 +1,256 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<!--    <div class="header-space"></div>-->
+		<!-- header end -->
+		<div class="slider gray-bg slider-bg-2 ptb-150">
+			<div class="container">
+				<div class="slider-info-text slider-text-style-3 text-center">
+					<div class="info-inner">
+						<h1>"Look.Beauty"</h1>
+						<span>Сервис, качество и красота - это про нас!</span>
+						<div class="view-more text-center mainBut">
+						<a href="reserv">ЗАПИСАТЬСЯ</a>
+					</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- portfolio start -->
+		<div class="portfolio-area gray-bg ptb-90">
+			<div class="container">
+				<div class="portfolio-menu text-center mb-50">
+					<button class="active" data-filter="*">Все</button>
+					<button data-filter=".cat1">Ногтевой сервис</button>
+					<button data-filter=".cat2">Уход за волосами</button>
+					<button data-filter=".cat3">Ресницы и брови</button>
+					<button data-filter=".cat4">Обучение</button>
+				</div>
+				<div class="row portfolio-style-4">
+					<div class="grid">
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat1">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static 'img/portfolio/1.jpg' %}"/>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat1">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static 'img/portfolio/2.jpg' %}"/>
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat3">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static 'img/portfolio/3.jpg' %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item  cat1">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/4.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat3">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/5.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat1">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/6.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat1">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/7.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat2">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/8.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat3">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/9.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat1">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/10.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat1">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/11.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat1">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/12.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat1">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/13.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-6 col-xs-12 grid-item cat4">
+							<div class="portfolio">
+								<a href="#">
+									<img src="{% static "img/portfolio/14.jpg" %}" alt="" />
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="view-more text-center">
+					<a href="reserv">ЗАПИСАТЬСЯ</a>
+				</div>
+			</div>
+		</div>
+		<!-- portfolio end -->
+
+<!-- blog-area start -->
+		<div class="blog-area ptb-90" id="zapis">
+            <div class="container">
+				<div class="section-title text-center mb-70">
+					<h2>Акции</h2>
+					<p>В комплексе наши услуги ещё выгоднее!</p>
+				</div>
+
+                <div class="row">
+<!--                    <div class="col-md-offset-2 col-md-4 col-sm-6 col-xs-12">-->
+<!--                        <div class="single-pricing">-->
+<!--                            <div class="pricing-top">-->
+<!--                                <h3>Комплекс</h3>-->
+<!--                                <p>1 100 р</p>-->
+<!--                            </div>-->
+<!--                            <div class="pricing-bottom">-->
+<!--                                <div class="pricing-tex">-->
+<!--                                    <ul>-->
+<!--                                        <li>Архитектура и окрашивание бровей + окрашивание ресниц</li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                                <div class="price-btn">-->
+<!--                                    <a href="#">Записаться</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+					 {% for message in messages %}
+                          <div class="col-md-12 text-center">
+                              <h4{% if message.tags %} class="{{ message.tags }}">{% endif %}{{ message }}</h3>
+                          </div>
+                    <br>
+                    <br>
+                        {% endfor %}
+					{% for stock in stock %}
+					<div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-pricing">
+                            <div class="pricing-top">
+                                <h3>{{stock.nameStock}}</h3>
+                                <p>{{stock.price}}<span>руб.</span></p>
+                            </div>
+                            <div class="pricing-bottom">
+                                <div class="pricing-tex">
+                                    <ul>
+                                        <li>{{stock.info}}</li>
+                                    </ul>
+                                </div>
+                                <div class="price-btn">
+                                    <a class="stockAdd" id="{{stock.id}}">Записаться</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					{% endfor %}
+                    </div>
+                </div>
+
+        </div>
+
+<div class="popupAcia">
+	<div class="hidePopup">
+		<div class="contentForm">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="conract-area-bottom">
+
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    {{ formStock.non_field_errors }}
+                                    <div class="col-md-12">
+                                        <div class="main-input">
+                                                <label for="{{ stockform.persons.id_for_label }}">Введите имя:</label>
+                                          {{stockform.persons.errors}}
+                                          {{stockform.persons}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="main-input mrg-eml mrg-contact">
+                                  <label for="{{ stockform.mail.id_for_label }}">Введите E-mail:</label>
+                                            {{stockform.mail.errors}}
+                                            {{stockform.mail}}
+                                        </div>
+                                    </div>
+									<div class="col-md-12">
+                                        <div class="main-input mrg-eml mrg-contact">
+                                  <label for="{{ stockform.phone.id_for_label }}">Введите телефон:</label>
+                                            {{stockform.phone.errors}}
+                                            {{stockform.phone}}
+                                        </div>
+                                    </div>
+									<div class="col-md-12" style="display: none">
+                                        <div class="main-input mrg-eml mrg-contact">
+<!--                                            {{formStock.stockId.errors}}-->
+                                            {{stockform.stockId}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12">
+                                        <div class="text-leave2 text-right">
+                                            <button class="submit" type="submit">Отправить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+
+<!--                              <form method="POST" class="post-form">{% csrf_token %}-->
+<!--        {{ formCont.as_p }}-->
+<!--        <button type="submit" class="save btn btn-default">Save</button>-->
+<!--    </form>-->
+                            <p class="form-messege"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+</div>
+{% endblock %}

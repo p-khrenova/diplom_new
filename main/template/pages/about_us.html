@@ -1,0 +1,360 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+		<section class="breadcrumbs-area ptb-30 port bread-card pattern-bread gray-bg border-bread">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="breadcrumbs">
+                            <h2 class="page-title">О нас</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Главная</a>
+                                </li>
+                                <li>
+                                    <a class="active" href="#">О нас</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<!-- breadcrumbs end -->
+        <section class="about-us-area ptb-90">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+						<div class="about-minimal">
+							<h2>Давайте познакомимся c <strong>"Look.Beauty"</strong></h2>
+							<p>Мы молодая студия красоты. Работаем с 19 января 2020 года. В условиях жесткой конкуренции нам важно предоставлять услуги высокого класса! Выбирая нас вы всегда получаете:</p>
+							<ul class="mb-40">
+								<li>Материалы класса люкс и премиум</li>
+								<li>Высококвалифицированные специалисты</li>
+								<li>Качественное обслуживание</li>
+								<li>Обучение от лучших мастеров</li>
+							</ul>
+<!--							<a href="#">Learn More</a>-->
+						</div>
+                    </div>
+					<div class="col-md-6">
+						<div class="minimal-img">
+							<img src="{% static "img/bg/about.jpg" %}" alt="" />
+						</div>
+					</div>
+                </div>
+            </div>
+        </section>
+<!--		<div class="analysis-area">-->
+<!--			<div class="container-fluid">-->
+<!--				<div class="row">-->
+<!--					<div class="col-md-4 col-sm-4 p-0">-->
+<!--						<div class="analysis-box">-->
+<!--							<h2>01</h2>-->
+<!--							<h4>Thinking.</h4>-->
+<!--							<p>Lorem ipsum scelerisque molestie id molestie magna ante etiam sollicitudin tempus consectetur conubia, urna eros nunc curabitur viverra rutrum tortor .</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-4 col-sm-4 p-0">-->
+<!--						<div class="analysis-box">-->
+<!--							<h2>02</h2>-->
+<!--							<h4>Design.</h4>-->
+<!--							<p>Lorem ipsum scelerisque molestie id molestie magna ante etiam sollicitudin tempus consectetur conubia, urna eros nunc curabitur viverra rutrum tortor .</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-4 col-sm-4 p-0">-->
+<!--						<div class="analysis-box">-->
+<!--							<h2>03</h2>-->
+<!--							<h4>Development.</h4>-->
+<!--							<p>Lorem ipsum scelerisque molestie id molestie magna ante etiam sollicitudin tempus consectetur conubia, urna eros nunc curabitur viverra rutrum tortor .</p>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="team-area pt-90 pb-60">-->
+<!--			<div class="container">-->
+<!--				<div class="section-title text-center mb-70">-->
+<!--					<h2>Great Team</h2>-->
+<!--					<p>Uaerat litora, taciti quaerat dolor ligula laoreet omnis aut scelerisque ex fuga platea eveniet pulvinar praesent molestiae maiores, quidem cumque!</p>-->
+<!--				</div>-->
+<!--				<div class="row">-->
+<!--					<div class="col-md-4 col-sm-4">-->
+<!--						<div class="team-wrapper mb-30">-->
+<!--							<div class="team-member">-->
+<!--								<img src="img/team/team-1.jpg" alt="" />-->
+<!--								<div class="team-icon">-->
+<!--									<a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--									<a href="#"><i class="fa fa-twitter"></i></a>-->
+<!--									<a href="#"><i class="fa fa-tumblr"></i></a>-->
+<!--									<a href="#"><i class="fa fa-linkedin"></i></a>-->
+<!--									<a href="#"><i class="fa fa-dribbble"></i></a>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							<div class="team-info text-center">-->
+<!--								<h3>Jon Doe</h3>-->
+<!--								<span>Developer</span>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-4 col-sm-4">-->
+<!--						<div class="team-wrapper mb-30">-->
+<!--							<div class="team-member">-->
+<!--								<img src="img/team/team-2.jpg" alt="" />-->
+<!--								<div class="team-icon">-->
+<!--									<a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--									<a href="#"><i class="fa fa-twitter"></i></a>-->
+<!--									<a href="#"><i class="fa fa-tumblr"></i></a>-->
+<!--									<a href="#"><i class="fa fa-linkedin"></i></a>-->
+<!--									<a href="#"><i class="fa fa-dribbble"></i></a>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							<div class="team-info text-center">-->
+<!--								<h3>Jonathon mark</h3>-->
+<!--								<span>Designer</span>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="col-md-4 col-sm-4">-->
+<!--						<div class="team-wrapper mb-30">-->
+<!--							<div class="team-member">-->
+<!--								<img src="img/team/team-3.jpg" alt="" />-->
+<!--								<div class="team-icon">-->
+<!--									<a href="#"><i class="fa fa-facebook"></i></a>-->
+<!--									<a href="#"><i class="fa fa-twitter"></i></a>-->
+<!--									<a href="#"><i class="fa fa-tumblr"></i></a>-->
+<!--									<a href="#"><i class="fa fa-linkedin"></i></a>-->
+<!--									<a href="#"><i class="fa fa-dribbble"></i></a>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--							<div class="team-info text-center">-->
+<!--								<h3>Mark Doe</h3>-->
+<!--								<span>Writer</span>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		<div class="project-count-area gray-bg ptb-60">-->
+<!--			<div class="container">-->
+<!--				<div class="col-md-3 col-sm-3">-->
+<!--					<div class="single-count">-->
+<!--						<div class="count-icon">-->
+<!--							<span class="icon-briefcase"></span>-->
+<!--						</div>-->
+<!--						<div class="count-title">-->
+<!--							<h2 class="count">360</h2>-->
+<!--							<span>project done</span>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-md-3 col-sm-3">-->
+<!--					<div class="single-count">-->
+<!--						<div class="count-icon">-->
+<!--							<span class="icon-wine"></span>-->
+<!--						</div>-->
+<!--						<div class="count-title">-->
+<!--							<h2 class="count">690</h2>-->
+<!--							<span>cups of coffee</span>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-md-3 col-sm-3">-->
+<!--					<div class="single-count">-->
+<!--						<div class="count-icon">-->
+<!--							<span class="icon-lightbulb"></span>-->
+<!--						</div>-->
+<!--						<div class="count-title">-->
+<!--							<h2 class="count">420</h2>-->
+<!--							<span>branding</span>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--				<div class="col-md-3 col-sm-3">-->
+<!--					<div class="single-count">-->
+<!--						<div class="count-icon">-->
+<!--							<span class="icon-happy"></span>-->
+<!--						</div>-->
+<!--						<div class="count-title">-->
+<!--							<h2 class="count">100</h2>-->
+<!--							<span>happy clients</span>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		&lt;!&ndash; pricing start &ndash;&gt;-->
+<!--        <section class="pricing-area ptb-100">-->
+<!--            <div class="container full-width-sm">-->
+<!--				<div class="section-title text-center mb-70">-->
+<!--					<h2>BEST PRICING</h2>-->
+<!--					<p>Uaerat litora, taciti quaerat dolor ligula laoreet omnis aut scelerisque ex fuga platea eveniet pulvinar praesent molestiae maiores, quidem cumque!</p>-->
+<!--				</div>-->
+<!--                <div class="row">-->
+<!--                    <div class="col-md-4 col-sm-4 col-xs-12">-->
+<!--                        <div class="single-pricing">-->
+<!--                            <div class="pricing-top">-->
+<!--                                <h3>BASIC PLAN</h3>-->
+<!--                                <p>$24<span>/Month</span></p>-->
+<!--                            </div>-->
+<!--                            <div class="pricing-bottom">-->
+<!--                                <div class="pricing-tex">-->
+<!--                                    <ul>-->
+<!--                                        <li>512MB Memory</li>-->
+<!--                                        <li>1 Core Processor</li>-->
+<!--                                        <li>20GB SSD Disk</li>-->
+<!--                                        <li>1TB Transfer</li>-->
+<!--                                        <li>24 hours support</li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                                <div class="price-btn">-->
+<!--                                    <a href="#">Purchase Now</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-4 col-sm-4 col-xs-12">-->
+<!--                        <div class="single-pricing mrg-tb">-->
+<!--                            <div class="pricing-top">-->
+<!--                                <h3>BUSINESS PLAN</h3>-->
+<!--                                <p>$34<span>/Month</span></p>-->
+<!--                            </div>-->
+<!--                            <div class="pricing-bottom">-->
+<!--                                <div class="pricing-tex">-->
+<!--                                    <ul>-->
+<!--                                        <li>2GB Memory</li>-->
+<!--                                        <li>2 Core Processor</li>-->
+<!--                                        <li>50GB SSD Disk</li>-->
+<!--                                        <li>10TB Transfer</li>-->
+<!--                                        <li>24 hours support</li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                                <div class="price-btn">-->
+<!--                                    <a href="#">Purchase Now</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="col-md-4 col-sm-4 col-xs-12">-->
+<!--                        <div class="single-pricing">-->
+<!--                            <div class="pricing-top">-->
+<!--                                <h3>Premium Plan</h3>-->
+<!--                                <p>$54<span>/Month</span></p>-->
+<!--                            </div>-->
+<!--                            <div class="pricing-bottom">-->
+<!--                                <div class="pricing-tex">-->
+<!--                                    <ul>-->
+<!--                                        <li>5GB Memory</li>-->
+<!--                                        <li>4 Core Processor</li>-->
+<!--                                        <li>100GB SSD Disk</li>-->
+<!--                                        <li>100TB Transfer</li>-->
+<!--                                        <li>24 hours support</li>-->
+<!--                                    </ul>-->
+<!--                                </div>-->
+<!--                                <div class="price-btn">-->
+<!--                                    <a href="#">Purchase Now</a>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </section>-->
+<!--		&lt;!&ndash; pricing end &ndash;&gt;-->
+<!--		&lt;!&ndash; testimonial-area start &ndash;&gt;-->
+<!--    	<div class="testimonial-area">-->
+<!--			<div class="container">-->
+<!--				<div class="gray-bg ptb-90">-->
+<!--					<div class="row">-->
+<!--						<div class="col-md-8 col-md-offset-2">-->
+<!--							<div class="testimonial-active dots-style">-->
+<!--								<div class="single-testimonial black-text text-center">-->
+<!--									<div class="testimonial-title">-->
+<!--										<span class="icon-quote"></span>-->
+<!--										<h3 class="black-text">What people say?</h3>-->
+<!--									</div>-->
+<!--									<p><span>"</span>Phasellus luctus commodo ullamcorper a posuere rhoncus commodo elit. Aenean congue, risus utaliquam dapibus. Thanks!<span>"</span></p>-->
+<!--									<div class="testimonial-author text-uppercase">-->
+<!--										<span>- John Doe, doodle inc. </span>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<div class="single-testimonial black-text text-center">-->
+<!--									<div class="testimonial-title">-->
+<!--										<span class="icon-quote"></span>-->
+<!--										<h3 class="black-text">What people say?</h3>-->
+<!--									</div>-->
+<!--									<p><span>"</span>Phasellus luctus commodo ullamcorper a posuere rhoncus commodo elit. Aenean congue, risus utaliquam dapibus. Thanks!<span>"</span></p>-->
+<!--									<div class="testimonial-author text-uppercase">-->
+<!--										<span>- John Doe, doodle inc. </span>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--								<div class="single-testimonial black-text text-center">-->
+<!--									<div class="testimonial-title">-->
+<!--										<span class="icon-quote"></span>-->
+<!--										<h3 class="black-text">What people say?</h3>-->
+<!--									</div>-->
+<!--									<p><span>"</span>Phasellus luctus commodo ullamcorper a posuere rhoncus commodo elit. Aenean congue, risus utaliquam dapibus. Thanks!<span>"</span></p>-->
+<!--									<div class="testimonial-author text-uppercase">-->
+<!--										<span>- John Doe, doodle inc. </span>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</div>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+<!--			</div>-->
+<!--		</div>-->
+<!--		&lt;!&ndash; testimonial-area end &ndash;&gt;-->
+<!--        &lt;!&ndash; about-skill-area start &ndash;&gt;-->
+<!--        <div class="about-skill-area ptb-90">-->
+<!--            <div class="container">-->
+<!--				<div class="section-title text-center mb-70">-->
+<!--					<h2>Our Skill</h2>-->
+<!--					<p>Uaerat litora, taciti quaerat dolor ligula laoreet omnis aut scelerisque ex fuga platea eveniet pulvinar praesent molestiae maiores, quidem cumque!</p>-->
+<!--				</div>-->
+<!--                <div class="row">-->
+<!--                    &lt;!&ndash; single-skill-about start &ndash;&gt;-->
+<!--                    <div class="col-xs-12 col-sm-6 col-md-3">-->
+<!--                        <div class="single-skill-about">-->
+<!--                            <div class="progress-circular">-->
+<!--                                  <input type="text" class="knob" value="0" data-rel="50" data-linecap="round" data-width="175" data-bgcolor="#F5F5F5" data-fgcolor="#666" data-thickness=".04" data-readonly="true" disabled>-->
+<!--                                  <h2 class="progress-h4">HTML</h2>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; single-skill-about end &ndash;&gt;-->
+<!--                    &lt;!&ndash; single-skill-about start &ndash;&gt;-->
+<!--                    <div class="col-xs-12 col-sm-6 col-md-3">-->
+<!--                        <div class="single-skill-about">-->
+<!--                            <div class="progress-circular">-->
+<!--                                  <input type="text" class="knob" value="0" data-rel="65" data-linecap="round" data-width="175" data-bgcolor="#F5F5F5" data-fgcolor="#666" data-thickness=".04" data-readonly="true" disabled>-->
+<!--                                  <h2 class="progress-h4">CSS</h2>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; single-skill-about end &ndash;&gt;-->
+<!--                    &lt;!&ndash; single-skill-about start &ndash;&gt;-->
+<!--                    <div class="col-xs-12 col-sm-6 col-md-3">-->
+<!--                        <div class="single-skill-about">-->
+<!--                            <div class="progress-circular">-->
+<!--                                  <input type="text" class="knob" value="0" data-rel="85" data-linecap="round" data-width="175" data-bgcolor="#F5F5F5" data-fgcolor="#666" data-thickness=".04" data-readonly="true" disabled>-->
+<!--                                  <h2 class="progress-h4">JQUERY</h2>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; single-skill-about end &ndash;&gt;-->
+<!--                    &lt;!&ndash; single-skill-about start &ndash;&gt;-->
+<!--                    <div class="col-xs-12 col-sm-6 col-md-3">-->
+<!--                        <div class="single-skill-about">-->
+<!--                            <div class="progress-circular">-->
+<!--                                  <input type="text" class="knob" value="0" data-rel="90" data-linecap="round" data-width="175" data-bgcolor="#F5F5F5" data-fgcolor="#666" data-thickness=".04" data-readonly="true" disabled>-->
+<!--                                  <h2 class="progress-h4">WORDPRESS</h2>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    &lt;!&ndash; single-skill-about end &ndash;&gt;-->
+<!--                </div>-->
+<!--            </div>-->
+<!--        </div>-->
+{% endblock %}

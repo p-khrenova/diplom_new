@@ -1,0 +1,96 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+  {% block content %}
+<section class="breadcrumbs-area ptb-50 port bread-card pattern-bread gray-bg border-bread">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="breadcrumbs">
+                            <h2 class="page-title masterName">Каталог мастеров</h2>
+                            <ul>
+                                <li>
+                                  <p>Время работы : c 9 до 17:00</p>
+                                </li>
+<!--                                <li>О нас</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<div class="container">
+
+
+      <div align="center" class="h2 pb-4"> Наши мастера </div>
+
+      <div class="row marketing">
+
+        {% for master in masters %}
+          <div class="col-lg-12 masterList">
+            {%if forloop.counter0|divisibleby:"2" == True %}
+              <div class="row">
+                  <div class="col-md-3 col-xs-3">
+                                       <img src="{% if master.profile_img %}{{ master.profile_img.url }} {% else %} {% static 'img/portfolio/1.jpg' %} {% endif %} " width="100%" height="" alt="Пример">
+                  </div>
+                  <div class="col-md-9 col-xs-9">
+                            <h4>{{master.name|safe}}</h4>
+                          <p>{{master.specialization|safe}}</p>
+                          <p>{{master.info|safe}}</p>
+                           <div class="view-more">
+                               <a class="" href="{% url 'reception' master_id=master.id %}">Записаться на прием</a>
+                           </div>
+                  </div>
+              </div>
+
+<!--                  <h4>{{master.name|safe}}</h4>-->
+<!--                  <p>{{master.specialization|safe}}</p>-->
+<!--                  <p>{{master.info|safe}}</p>-->
+<!--                   <div class="view-more">-->
+<!--                       <a class="" href="{% url 'reception' master_id=master.id %}">Записаться на прием</a>-->
+<!--                   </div>-->
+            {% endif %}
+          </div>
+
+          <div class="col-lg-12 masterList">
+            {%if forloop.counter0|divisibleby:"2" == False %}
+                   <div class="row">
+                  <div class="col-md-3 col-xs-3">
+                                       <img src="{% if master.profile_img %}{{ master.profile_img.url }} {% else %} {% static 'img/portfolio/1.jpg' %} {% endif %} " width="100%" height="" alt="Пример">
+                  </div>
+                  <div class="col-md-9 col-xs-9">
+                            <h4>{{master.name|safe}}</h4>
+                          <p>{{master.specialization|safe}}</p>
+                          <p>{{master.info|safe}}</p>
+                           <div class="view-more">
+                               <a class="" href="{% url 'reception' master_id=master.id %}">Записаться на прием</a>
+                           </div>
+                  </div>
+              </div>
+            {% endif %}
+          </div>
+
+
+            {% comment %}
+          <div class="col-lg-12 masterList">
+                 <div class="row">
+                  <div class="col-md-3 col-xs-3">
+                                       <img src="{% if master.profile_img %}{{ master.profile_img.url }} {% else %} {% static 'img/portfolio/1.jpg' %} {% endif %} " width="100%" height="" alt="Пример">
+                  </div>
+                  <div class="col-md-9 col-xs-9">
+                            <h4>{{master.name|safe}}</h4>
+                          <p>{{master.specialization|safe}}</p>
+                          <p>{{master.info|safe}}</p>
+                           <div class="view-more">
+                               <a class="" href="{% url 'reception' master_id=master.id %}">Записаться на прием</a>
+                           </div>
+                  </div>
+              </div>
+          </div>
+            {% endif %}
+
+      {% endcomment %}
+        {% endfor %}
+      </div>
+</div>
+  {% endblock content %}

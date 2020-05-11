@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section class="breadcrumbs-area gray-bg ptb-30 port bread-card solid-color">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="breadcrumbs">
+                            <h2 class="page-title">Контакты</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Главная</a>
+                                </li>
+                                <li>
+                                    <a class="active" href="#">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<!-- breadcrumbs end -->
+        <section class="contact-area ptb-40">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div style="position:relative;overflow:hidden;">
+                            <iframe src="https://yandex.ru/map-widget/v1/-/CKeEm4oF" width="100%" height="400" style="position:relative; border: none;"></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="conract-area-bottom">
+                            <h3 class="main-contact">Мы готовы к вашим предложениям</h3>
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    {{ form.non_field_errors }}
+                                    <div class="col-md-6">
+                                        <div class="main-input">
+                                                <label for="{{ formCont.person.id_for_label }}">Введите имя:</label>
+                                          {{formCont.person.errors}}
+                                          {{formCont.person}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="main-input mrg-eml mrg-contact">
+                                  <label for="{{ formCont.mail.id_for_label }}">Введите E-mail:</label>
+                                            {{formCont.mail.errors}}
+                                            {{formCont.mail}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12">
+                                        <div class="text-leave2">
+                        <label for="{{ formCont.person.id_for_label }}">Введите сообщение:</label>
+
+                                            {{formCont.message.errors}}
+                                            {{formCont.message}}
+                                            <button class="submit" type="submit">Отправить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+
+<!--                              <form method="POST" class="post-form">{% csrf_token %}-->
+<!--        {{ formCont.as_p }}-->
+<!--        <button type="submit" class="save btn btn-default">Save</button>-->
+<!--    </form>-->
+                            <p class="form-messege"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+{% endblock %}

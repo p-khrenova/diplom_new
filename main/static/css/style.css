@@ -1,0 +1,495 @@
+
+.bg-img {
+  background: rgba(0, 0, 0, 0) url("img/bg-2.jpg") repeat scroll center center / cover ;
+  height: 100vh;
+}
+.slider > img {
+  width: 100%;
+}
+.fa {
+  padding: 7px 0!important;
+}
+
+/*----- about us  ------*/
+.single-count {
+  text-align: center;
+}
+
+.count-icon {
+
+}
+.count-icon span{font-size: 35px;}
+.count-title {
+
+}
+.count-title h2 {
+  color: #464646;
+  font-size: 40px;
+  font-weight: 300;
+  margin: 15px 0;
+}
+.count-title span{font-size: 16px;
+letter-spacing: 1px;
+margin: 0;
+text-transform: capitalize;}
+
+.hover-style {
+  display: block;
+  position: relative;
+}
+.hover-style::before {
+  background: #fff none repeat scroll 0 0;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.3s ease-in-out 0s;
+  width: 100%;
+}
+.hover-style:hover::before {
+  opacity: 0.95;
+}
+
+/* about */
+.about-minimal{}
+.about-minimal h2{}
+.minimal-img > img {
+  width: 100%;
+  margin: 10px;
+}
+.about-minimal{}
+.about-minimal ul{}
+.about-minimal ul li {
+  border-top: 1px solid #f6f6f6;
+  display: block;
+  line-height: 1.3em;
+  list-style-type: none;
+  margin: 0;
+  padding: 15px 0;
+  position: relative;
+}
+.about-minimal ul li:last-child {
+  border-bottom: 1px solid #eceaeb;
+}
+.about-minimal ul li::before {
+  color: #444;
+  content: "";
+  font-family: FontAwesome;
+  font-size: 13px;
+  line-height: 12px;
+  margin-left: 0;
+  margin-right: 10px;
+  position: relative;
+  top: 1px;
+}
+.about-minimal a {
+  border: 1px solid #ddd;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 16px;
+  margin-bottom: 5px;
+  padding: 12px 25px;
+  text-transform: uppercase;
+}
+.about-minimal a:hover{background:#464646;color:#fff;border-color:#464646}
+.single-skill-about {
+  text-align: center;
+}
+.progress-h4 {
+  font-size: 22px;
+  font-weight: 400;
+}
+
+.about-us-text > p {
+  color: #666;
+}
+.team-wrapper {
+  border: 1px solid #e7e7e7;
+}
+.team-member {
+  position: relative;
+}
+.team-member > img {
+  filter: grayscale(100%);
+  width: 100%;
+}
+.team-member::before {
+  background: transparent none repeat scroll 0 0;
+  content: " ";
+  display: block;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: all 0.27s cubic-bezier(0, 0, 0.58, 1) 0s;
+  width: 100%;
+  z-index: 1;
+}
+.team-wrapper:hover .team-member::before  {
+  background: rgba(33, 40, 45, 0.55);
+}
+.team-info {
+  padding: 15px 0;
+}
+.team-icon {
+  left: 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 99;
+}
+.team-icon > a {
+  border: 1px solid transparent;
+  color: #fff;
+  display: inline-block;
+  font-size: 18px;
+  height: 40px;
+  line-height: 36px;
+  margin: 0 15px;
+  opacity: 0;
+  text-align: center;
+  visibility: hidden;
+  width: 40px;
+  border-radius:50%;
+}
+.team-icon > a:hover{background:#fff;color:#666}
+.team-wrapper:hover .team-icon > a{opacity:1;visibility:visible;margin:0 5px}
+.team-info h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.team-info span {
+  color: #666;
+  text-transform: uppercase;
+}
+.team-member > img {
+  filter: grayscale(100%);
+  -webkit-filter: grayscale(100%);
+}
+
+/*----- pricing table  ------*/
+.pricing-top {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  overflow: hidden;
+}
+.single-pricing {
+  border: 1px solid #ddd;
+  padding: 50px;
+  text-align: center;
+  height: 360px;
+  position: relative;
+}
+.pricing-top h3 {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+.pricing-top h3::before {
+  background: #666 none repeat scroll 0 0;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  width: 60px;
+}
+.pricing-top p {
+  /*font-family: ;*/
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 28px;
+}
+.pricing-top p span {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.pricing-tex li {
+  color: #333333;
+  font-size: 14px;
+  padding-bottom: 22px;
+  text-transform: capitalize;
+}
+.pricing-tex li:last-child {
+  padding-bottom: 0px;
+}
+.pricing-tex li i{
+  padding-right: 10px;
+}
+.price-btn{
+  margin-bottom: 2px;
+}
+.price-btn a {
+  background-color: transparent;
+  border: 1px solid #c1c1c1;
+  color: #464646;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease 0s;
+}
+.price-btn a:hover{
+  background-color: #464646;
+  border: 1px solid #464646;
+  color: #fff;
+}
+.pricing-tex > ul {
+  padding: 40px 0;
+}
+
+.price-btn .button i {
+  font-size: 14px;
+  padding-left: 12px;
+}
+.portfolio-area table td, th{
+  border-top: none!important;
+  border-bottom: none!important;
+}
+
+.head_table_name {
+  font-weight: bold;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: #cd899d;
+  padding: 20px 0!important;
+  text-align: center;
+}
+.head_table_name td{
+
+}
+
+/*----- contact ------*/
+.infoMaster{
+  margin-top: 15vh;
+}
+#hastech2 {
+  height: 402px;
+  width: 100%;
+}
+h3.main-contact {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 32px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.main-input input {
+  background-color: transparent;
+  border: 1px solid #ddd;
+  color: #666;
+  font-family: "Lato",sans-serif;
+  font-size: 14px;
+  height: 45px;
+  padding-left: 20px;
+  margin-bottom: 10px;
+}
+
+
+.text-leave2 textarea {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #ddd;
+  color: #666;
+  font-family: "Montserrat-Regular" !important;
+  height: 150px;
+  margin-bottom: 40px;
+  padding: 14px 20px;
+}
+
+.leave-form input:focus, .main-input input:focus, .text-leave textarea:focus, .text-leave2 textarea:focus {
+  background: transparent none repeat scroll 0 0;
+  border: 1px solid #f6f6f6;
+}
+.mfp-wrap {
+  z-index: 99999999;
+}
+.mfp-bg {
+  z-index: 9999999;
+}
+.mainBut{
+      margin-top: 20px;
+}
+.login-register-tab-list a{
+  display: inline-block;
+  padding: 20px 10px;
+
+}
+.hidePopup{
+  display: none;
+}
+.popupAcia{
+      display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contentForm{
+      max-width: 630px;
+}
+/*............. 18. Scrollup   ................*/
+
+#toTop {
+    text-align: center;
+    bottom: 35px;
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    right: 12px;
+    z-index: 9999;
+}
+#toTop i {
+    background-color: #464646;
+    height: 40px;
+    width: 40px;
+    color: #fff;
+    line-height: 40px;
+}
+#toTop i:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+.conract-area-bottom {
+  margin-top: 50px;
+}
+.person_room img{
+      width: 30px;
+    vertical-align: middle;
+}
+.view-more button{
+    border: 1px solid #ddd;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 25px;
+    text-transform: uppercase;
+}
+.view-more button:hover{background:#444;color:#fff;border-color:#444}
+
+.regButton{
+    margin-left: 10px!important;
+}
+.popupProfile{
+  display: none;
+         position: absolute;
+    width: 259px;
+    right: 0px;
+    bottom: -75px;
+    background: #ffffff;
+    padding: 20px;
+}
+
+.contentSucces{
+   width: 250px;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -125px 0 0 -125px;
+
+}
+.sucsessPopup{
+   width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: auto;
+
+
+}
+
+.marketing{
+      padding: 50px 0px;
+}
+.masterName{
+  font-size: 18px!important;
+}
+.masterList{
+  padding: 20px 0 0px 0;
+}
+.registrCatalog{
+  margin-bottom: 50px;
+}
+#ui-datepicker-div div{
+      padding: 15px;
+}
+#ui-datepicker-div .ui-datepicker-prev{
+padding: 20px;
+}
+#ui-datepicker-div .ui-datepicker-next{
+padding: 20px;
+}
+#ui-datepicker-div .ui-datepicker-title{
+padding: 20px;
+}
+#ui-datepicker-div span{
+  color: white;
+}
+#ui-datepicker-div a{
+  color: white;
+}
+.ui-datepicker-calendar{
+  color: white;
+      display: block;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+.ui-datepicker-calendar th, td{
+  padding: 5px;
+  text-align: center;
+}
+#ui-datepicker-div{
+    background: #999 none;
+}
+.activeEl{
+  padding: 5px 20px;
+    background-color: grey!important;
+    border: none!important;
+    color: white!important;
+}
+.blokUsl{
+    display: inline-block;
+    /*width: 200px;*/
+  padding: 5px 20px;
+    background-color: white;
+    border: 2px solid;
+}
+
+@media screen and (max-width: 700px){
+  .slider-text-style-3 .info-inner{
+    padding: 30px 0;
+  }
+  .logo {
+    display: inline-block;
+    width: 50%;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    vertical-align: middle;
+  }
+  .meanmenu-reveal{
+    position: absolute!important;
+    top: -50px!important;
+  }
+    .portfolio-menu button::before {
+      background: #464646 none repeat scroll 0 0;
+      bottom: 2px;
+      content: "";
+      height: 2px;
+      position: absolute;
+      transform: scaleX(0);
+      transition: all 0.3s ease 0s;
+      width: 100%;
+  }
+}

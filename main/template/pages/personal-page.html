@@ -1,0 +1,213 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+
+
+
+<section class="breadcrumbs-area ptb-50 port bread-card pattern-bread gray-bg border-bread">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="breadcrumbs">
+                            <h2 class="page-title masterName">Добро пожаловать</h2>
+                            <ul>
+                                                                <li>{{ user.username }}</li>
+
+<!--                                <li>О нас</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <div class="checkout-area pb-80 pt-100">
+    <div class="container">
+        <div class="row">
+            <div class="ml-auto mr-auto col-lg-9">
+                <div class="checkout-wrapper">
+                    <div id="faq" class="panel-group">
+                        <div class="login-register-tab-list nav">
+                            <a data-toggle="tab" class="lg1" href="#lg1">
+                                <h4>Личные данные</h4>
+                            </a>
+                            <a data-toggle="tab" href="#lg2" class="lg2 active">
+                                <h4>Изменить данные</h4>
+                            </a>
+                        </div>
+                        <div class="tab-content">
+                            <div id="lg1" class="tab-pane">
+                                <div class="panel panel-default single-my-account">
+                                <div class="panel-heading my-account-title">
+                                    <h3 class="panel-title"><span>1 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-1" aria-expanded="true" class="collapsed">Личные данные</a></h3>
+                                </div>
+                                <div  class="panel-collapse collapse" style="display: block;">
+                                    <div class="panel-body">
+                                        <div class="myaccount-info-wrapper">
+                                            <div class="account-info-wrapper">
+                                                <h4>Личные данные {{ user.username }}</h4>
+                                            </div>
+                                            <div class="row">
+    {#                                            {% for o in my_orders %}#}
+    {#                                                {{ o.first_name }}<br>#}
+    {#                                                {{ o.last_name }}<br>#}
+    {#                                                {{ o.email }}#}
+    {#                                            {% endfor %}#}
+                                                 <div class="col-lg-6 col-md-6">
+                                                     <div class="row">
+                                                 <div class="col-lg-12 col-md-12">
+                                                    <div class="billing-info">
+                                                        <img style="
+    border-radius: 20px;
+    width: 50%;
+" src="{% static "img/portfolio/13.jpg" %}" >
+    {#                                                    <input type="text">#}
+                                                    </div>
+                                                 </div>
+                                                     </div>
+                                                 </div>
+                                                  <div class="col-lg-6 col-md-6">
+                                                     <div class="row">
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="billing-info">
+                                                        <label>Имя</label>
+                                                        <p>{{ user.first_name }}</p>
+    {#                                                    <input type="text">#}
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <div class="billing-info">
+                                                        <label>Фамилия</label>
+                                                        <p>{{ user.last_name }}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-12 col-md-12">
+                                                    <div class="billing-info">
+                                                        <label>Email</label>
+                                                        <p>{{ user.email }}</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-md-6">
+                                                    <div class="billing-info">
+                                                        <label>Телефон</label>
+                                                        <p>{{ phone }}</p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <div class="panel panel-default single-my-account">
+                                <div class="panel-heading my-account-title">
+                                    <h3 class="panel-title"><span>2 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-2" class="collapsed" aria-expanded="true">Заказы</a></h3>
+                                </div>
+                                <div class="panel-collapse collapse" style="display: block">
+                                    <div class="panel-body">
+                                        <div class="myaccount-info-wrapper">
+
+                                              <div class="row">
+                                                 <div class="col-md-2 col-lg-2">
+                                                   Имя клиента
+                                                 </div>
+                                                 <div class="col-md-3 col-lg-3">
+                                                    Дополнительная информация
+                                                 </div>
+                                                 <div class="col-md-2 col-lg-2">
+                                                    Дата
+                                                 </div>
+                                                  <div class="col-md-1 col-lg-1">
+                                                    Время
+                                                 </div>
+                                                  <div class="col-md-2 col-lg-2">
+                                                    Мастер
+                                                 </div>
+                                                 <div class="col-md-2 col-lg-2">
+                                                    Услуга
+                                                 </div>
+                                                 <div class="col-md-1 col-lg-1">
+                                                    Стоимость
+                                                 </div>
+
+                                        </div>
+                                             <hr>
+                                         {% for o in listZakaz %}
+                                        <div class="row">
+                                                 <div class="col-md-2 col-lg-2">
+<!--                                                    {{ o.person_id.id }}-->
+<!--                                                    {{ request.user.id }}-->
+                                                    {{ o.client_name }}
+                                                 </div>
+                                                 <div class="col-md-3 col-lg-3">
+                                                    {{ o.client_info }}
+                                                 </div>
+                                                 <div class="col-md-2 col-lg-2">
+                                                    {{ o.date }}
+                                                 </div>
+                                                  <div class="col-md-1 col-lg-1">
+                                                    {{ o.time }}
+                                                 </div>
+                                                  <div class="col-md-2 col-lg-2">
+                                                    {{ o.master }}
+                                                 </div>
+                                                 <div class="col-md-2 col-lg-2">
+                                                    {{ o.uslugi }}
+                                                 </div>
+                                                 <div class="col-md-1 col-lg-1">
+                                                    {{ o.cost }}
+                                                 </div>
+                                        </div>
+                                              {% endfor %}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            </div>
+                            <div id="lg2" class="tab-pane active">
+                                <div class="panel panel-default single-my-account">
+                                <div class="panel-heading my-account-title">
+                                    <h3 class="panel-title"><span>1 .</span> <a data-toggle="collapse" data-parent="#faq" href="#my-account-1" aria-expanded="true" class="collapsed">Изменить данные</a></h3>
+                                </div>
+                                <div  class="panel-collapse collapse" style="display: block;">
+                                    <div class="panel-body">
+                                        <div class="myaccount-info-wrapper">
+                                             <div class="account-info-wrapper">
+                                                <h4>Изменить личные данные {{ user.username }}</h4>
+                                            </div>
+                                                <form method="post">
+                                                    {% csrf_token %}
+                                                    {{ user_form.as_p }}
+                                                    {{ profile_form.as_p }}
+                                                    <button class="btn btn-success">Изменить</button>
+                                                </form>
+                                        </div>
+                                         <div class="myaccount-info-wrapper">
+                                              <div class="account-info-wrapper">
+                                                <h4>Изменение пароля для {{ user.username }}</h4>
+                                              </div>
+                                                <form method="post">
+                                                    {% csrf_token %}
+                                                    {{ formsPass }}
+                                                    <br>
+                                                    <br>
+                                                    <button class="btn btn-success">Изменить</button>
+                                                </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+ 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

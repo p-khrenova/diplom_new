@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+
+
+
+  {% block content %}
+<section class="breadcrumbs-area ptb-50 port bread-card pattern-bread gray-bg border-bread">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="breadcrumbs">
+                            <h2 class="page-title masterName">{{master.name|safe}}</h2>
+                            <ul>
+                                <li>
+                                   {{master.specialization|safe}}
+                                </li>
+<!--                                <li>О нас</li>-->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<div class="container">
+    {% if curr_date %}
+      <div align="center">
+        <h3>Вы записались на прием<br>
+            на {{curr_date}} {{curr_time}}
+        </h3>
+      </div>
+    {%endif%}
+
+      {%if message %}
+        <div align="center"> 
+          <h3>{{message}}</h3>
+        </div>
+      {%endif%}
+
+    <br><br>
+
+
+
+     {% if user.is_authenticated %}
+    <div align="center">
+      <form action="" class="form-inline" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+              {% for serv in usl %}
+    <div class="blokUsl" id="{{ serv.id }}" data-price="{{ serv.price }}">
+        <ul class="list_uslug">
+<!--            <li>{{ serv.master }}</li>-->
+            <li class="id_uslug" style="display: none">{{ serv.id }}</li>
+            <li class="nameUsl">{{ serv.name }}</li>
+            <li id="price_uslug" class="price_uslug">{{ serv.price }} руб</li>
+        </ul>
+    </div>
+    {% endfor %}
+          <table class="table table-borderless"> 
+            <tr><th>{{form.date.label}}</th><td>{{form.date}}{{form.date.errors}}<br><br></td></tr>
+            <tr>
+              <th>{{form.time.label}}</th>
+            <td>
+                <table class="table table-bordered">
+                  <tr>
+                    <td align="center" valign="center" class="time">9:00</td>
+                    <td align="center" valign="center" class="time">11:00</td>
+                    <td align="center" valign="center" class="time">13:00</td>
+                  </tr>
+                  <tr>
+                    <td align="center" valign="center" class="time">15:00</td>
+                    <td align="center" valign="center" class="time">17:00</td>
+                    <td align="center" valign="center" class="time">19:00</td>
+                  </tr>
+<!--                  <tr>-->
+<!--                    <td align="center" valign="center" class="time">15:00</td>-->
+<!--                    <td align="center" valign="center" class="time">16:00</td>-->
+<!--                    <td align="center" valign="center" class="time">17:00</td>-->
+<!--                  </tr>-->
+                </table>
+                {{form.time.errors}}
+            </td></tr>
+                  {% if user.is_authenticated %}
+             <tr><th> {{form.client_name.label}}</th><td>
+                 <input type="text" name="client_name" maxlength="300" required="" value="{{user.username}}" id="id_client_name">
+                             <tr><th><input type="text" name="person_id" maxlength="300" required="" value="{{user.id}}" id="id_person_id" hidden><br><br></td></tr>
+
+                 {{form.client_name.errors}}<br><br></td></tr>
+<!--												<a href="logout">Выйти ({{user.username}}) </a>-->
+											{% else %}
+                                           <tr><th><input type="text" name="person_id" maxlength="300" required="" value="0" id="id_person_id" hidden><br><br></td></tr>
+
+            <tr><th>{{form.client_name.label}}</th><td>{{form.client_name}}{{form.client.errors}}<br><br></td></tr>
+              {% endif %}
+            <tr style="display: none" ><td>{{form.uslugi}}{{form.uslugi.errors}}</td></tr>
+            <tr style="display: none" ><td>{{form.cost}}{{form.cost.errors}}</td></tr>
+<!--            <tr><th>{{form.uslugi.label}}</th><td>{{form.uslugi}}{{form.uslugi.errors}}<br><br></td></tr>-->
+            <tr><th>{{form.client_info.label}}</th><td>{{form.client_info}}{{form.client_info.errors}}<br><br></td></tr>
+          </table>
+            {{form.time}}
+            <div style="padding-left:20%;" class="view-more"><button id="submit">Записаться</button></div>
+          
+        </div>
+      </form>
+    </div>
+    {% else %}
+    <div style="padding-left:20%;" class="view-more registrCatalog">
+        <a href="/register" style="margin-left: 20%">Пройти регистрацию</a>
+    </div>
+    {% endif %}
+</div>
+  {% endblock content %}
+
+<!--  {% block js %} -->
+<!--    <script src="{% static 'jquery-ui/jquery-ui.js' %}" ></script>-->
+
+
+<!--  {% endblock %}-->
+

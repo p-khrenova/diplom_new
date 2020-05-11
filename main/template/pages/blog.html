@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+		<section class="breadcrumbs-area gray-bg ptb-30 port bread-card solid-color">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="breadcrumbs">
+                            <h2 class="page-title">Новости</h2>
+                            <ul>
+                                <li>
+                                    <a href="#">Главная</a>
+                                </li>
+                                <li>
+                                    <a class="active" href="#">Новости</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+		<!-- breadcrumbs end -->
+        <section class="blog-area ptb-100">
+            <div class="container-fluid">
+                <div class="blog-area ptb-90">
+            <div class="container">
+				<div class="section-title text-center mb-70" id="zapis">
+					<h2>Акции</h2>
+					<p>В комплексе наши услуги ещё выгоднее!</p>
+				</div>
+
+                <div class="row">
+                     {% for message in messages %}
+                          <div class="col-md-12 text-center">
+                              <h4{% if message.tags %} class="{{ message.tags }}">{% endif %}{{ message }}</h3>
+                          </div>
+                    <br>
+                    <br>
+                        {% endfor %}
+                   {% for stock in stock %}
+					<div class="col-md-4 col-sm-6 col-xs-12">
+                        <div class="single-pricing">
+                            <div class="pricing-top">
+                                <h3>{{stock.nameStock}}</h3>
+                                <p>{{stock.price}}<span>руб.</span></p>
+                            </div>
+                            <div class="pricing-bottom">
+                                <div class="pricing-tex">
+                                    <ul>
+                                        <li>{{stock.info}}</li>
+                                    </ul>
+                                </div>
+                                <div class="price-btn">
+                                    <a class="stockAdd" id="{{stock.id}}">Записаться</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					{% endfor %}
+                    {% if messages %}
+
+{% endif %}
+                    </div>
+                </div>
+        </div>
+                </div>
+            </div>
+            <div class="popupAcia">
+	<div class="hidePopup">
+		<div class="contentForm">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="conract-area-bottom">
+
+                            <form method="post">
+                                {% csrf_token %}
+                                <div class="row">
+                                    {{ formStock.non_field_errors }}
+                                    <div class="col-md-12">
+                                        <div class="main-input">
+                                                <label for="{{ stockform.persons.id_for_label }}">Введите имя:</label>
+                                          {{stockform.persons.errors}}
+                                          {{stockform.persons}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="main-input mrg-eml mrg-contact">
+                                  <label for="{{ stockform.mail.id_for_label }}">Введите E-mail:</label>
+                                            {{stockform.mail.errors}}
+                                            {{stockform.mail}}
+                                        </div>
+                                    </div>
+									<div class="col-md-12">
+                                        <div class="main-input mrg-eml mrg-contact">
+                                  <label for="{{ stockform.phone.id_for_label }}">Введите телефон:</label>
+                                            {{stockform.phone.errors}}
+                                            {{stockform.phone}}
+                                        </div>
+                                    </div>
+									<div class="col-md-12" style="display: none">
+                                        <div class="main-input mrg-eml mrg-contact">
+<!--                                            {{formStock.stockId.errors}}-->
+                                            {{stockform.stockId}}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12"></div>
+                                    <div class="col-md-12">
+                                        <div class="text-leave2 text-right">
+                                            <button class="submit" type="submit">Отправить</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+
+
+<!--                              <form method="POST" class="post-form">{% csrf_token %}-->
+<!--        {{ formCont.as_p }}-->
+<!--        <button type="submit" class="save btn btn-default">Save</button>-->
+<!--    </form>-->
+                            <p class="form-messege"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+	</div>
+</div>
+        </section>
+{% endblock %}
